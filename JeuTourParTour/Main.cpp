@@ -18,19 +18,94 @@ using namespace std;
 #pragma endregion
 
 
+//class Actiona
+//{
+//	public:
+//		virtual void f()
+//		{
+//			cout << "ParentAction";
+//		}
+//};
+//class ActionaChild : public Actiona
+//{
+//	public:
+//		void f() override
+//		{
+//			cout << "ChildAction";
+//		}
+//};
+//class ParentA
+//{
+//	protected:
+//		Actiona* action = new Actiona();
+//
+//	public:
+//		virtual void functiontest()
+//		{
+//			cout << "Parent A:";
+//			action->f();
+//		}
+//
+//};
+//class ChildB : public ParentA
+//{
+//	public: 
+//		ChildB()
+//		{
+//			this->action = new ActionaChild();
+//		}
+//	public:
+//		void functiontest() override
+//		{
+//			cout << "child B:";
+//			action -> f();
+//		}
+//};
+
 
 GameData gameData = GameData::GetInstance();
 int main()
 {
-	/*gameData.InitializeGameData();
+	/*ParentA a = *new ParentA();
+	a.functiontest();
+	cout<<endl;
+
+
+	ChildB b = *new ChildB();
+	b.functiontest();
+	cout << endl;
+
+
+	ParentA &c = *new ChildB();
+	c.functiontest();
+	cout << endl;*/
+
+
+
+	gameData.InitializeGameData();
 
 	gameData.playerTeam[0].UseAction();
-	gameData.playerTeam[1].UseAction();*/
+	gameData.playerTeam[1].UseAction();
 
-	Medecin medecin = *new Medecin();
-	medecin.UseAction();
+	////WORK
+	//Character medecin0 = *new Medecin();
+	//medecin0.UseAction();
+	////WORK
+	//Character& medecin1 = *new Medecin();
+	//medecin1.UseAction();
+	////WORK
+	//Medecin& medecin2 = *new Medecin();
+	//medecin2.UseAction();
 
-	HealAction healAction = *new HealAction();
-	healAction.UseAction();
+	////DONT WORK 
+	//ActionBase action = *new HealAction();
+	//action.UseAction();
+	////WORK 
+	//ActionBase& action2 = *new HealAction();
+	//action2.UseAction();
+
+	////WORK
+	//HealAction healAction = *new HealAction();
+	//healAction.UseAction();
 	return 0;
 }

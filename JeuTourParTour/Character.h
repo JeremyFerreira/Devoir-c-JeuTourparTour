@@ -9,7 +9,7 @@ protected:
 	std::string m_name = "none";
 	float m_health = 3;
 	bool m_isDead = false;
-	ActionBase m_action = *new ActionBase("actionName", 0);
+	ActionBase* m_action = new ActionBase("actionName", 0);
 #pragma endregion
 
 #pragma region Getters
@@ -22,7 +22,7 @@ public:
 
 	//constructor
 public:
-	Character(std::string name, float health, ActionBase action);
+	Character(std::string name, float health, ActionBase& action);
 	Character();
 
 	//base action
