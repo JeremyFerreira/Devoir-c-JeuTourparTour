@@ -50,13 +50,13 @@ Character GameData::AskForCharacterType()
 	switch (stoi(input))
 	{
 		case 1:
-			return Knight();
+			return *new Knight();
 			break;
 		case 2:
-			return Medecin();
+			return *new Medecin();
 			break;
 		default :
-			return Character("yo", 10, ActionBase("action1", 1));
+			return *new Character("yo", 10, *new ActionBase("action1", 1));
 	}
 }
 

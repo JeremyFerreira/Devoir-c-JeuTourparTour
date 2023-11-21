@@ -22,6 +22,15 @@ using namespace std;
 GameData gameData = GameData::GetInstance();
 int main()
 {
-	gameData.InitializeGameData();
+	/*gameData.InitializeGameData();
+
+	gameData.playerTeam[0].UseAction();
+	gameData.playerTeam[1].UseAction();*/
+
+	Medecin medecin = *new Medecin();
+	medecin.UseAction();
+
+	HealAction healAction = *new HealAction();
+	healAction.UseAction();
 	return 0;
 }

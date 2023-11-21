@@ -9,7 +9,7 @@ protected:
 	std::string m_name = "none";
 	float m_health = 3;
 	bool m_isDead = false;
-	ActionBase m_action = ActionBase("actionName", 0);
+	ActionBase m_action = *new ActionBase("actionName", 0);
 #pragma endregion
 
 #pragma region Getters

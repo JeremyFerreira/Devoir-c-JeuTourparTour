@@ -20,7 +20,7 @@
 	}
 #pragma endregion
 	//constructor
-	Character::Character(std::string name = "none", float health = 3, ActionBase action = ActionBase("default", 0))
+	Character::Character(std::string name = "none", float health = 3, ActionBase action = *new ActionBase("default", 0))
 	{
 		m_name = name;
 		m_health = health;

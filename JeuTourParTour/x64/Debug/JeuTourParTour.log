@@ -1,5 +1,8 @@
 ﻿  Character.cpp
+  Enemy.cpp
   GameData.cpp
+  Knight.cpp
   Main.cpp
+  Medecin.cpp
   Génération de code en cours...
-  JeuTourParTour.vcxproj -> C:\Users\jerem\JeuTourParTour\x64\Debug\JeuTourParTour.exe
+  JeuTourParTour.vcxproj -> C:\Users\jerem\Devoir-c-JeuTourparTour\JeuTourParTour\x64\Debug\JeuTourParTour.exe

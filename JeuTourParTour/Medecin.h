@@ -1,7 +1,11 @@
 #pragma once
 #include "Character.h"
+#include "HealAction.h"
 class Medecin : public Character
 {
-public: Medecin();
+	//constructor
+	public: Medecin();
+
+		  void UseAction() override;
 };
 

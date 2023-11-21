@@ -7,13 +7,11 @@ class ActionBase
 		int m_cost = 0;
 		//Constructor
 	public:
-		ActionBase(std::string name, int cost)
-		{
-			m_name = name;
-			m_cost = cost;
-		}
+		ActionBase(std::string name, int cost);
+		ActionBase();
+		//functions
 	public:
 		std::string GetName();
-		void UseAction();
+		virtual void UseAction();
 };
 
